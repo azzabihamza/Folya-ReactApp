@@ -1,19 +1,25 @@
 import React, { FC } from "react";
-import './styles.module.scss';
 
 interface Props {
-    label: string;
-    onClick: () => void;
+    children?: React.ReactNode
+    onClick?: () => void;
     disabled?: boolean;
-    variant?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark' | 'link';
+    bgColor?: string;
+
 }
 
-const Button: FC<Props> = ({ label, onClick , disabled=false , variant = 'primary' }) => {
+export const Button: FC<Props> = ({ children, bgColor, onClick, disabled=false }) => {
     return (
-        <button className={`btn btn-${variant} py-2 px-4 rounded bg-green-500 hover:bg-green-600 focus:outline-none ring-opacity-75 ring-green-400 focus:ring text-white text-lg`} onClick={onClick} disabled={disabled}>
-            {label}
+        <button 
+            type="button"
+            className={`bg-${bgColor}-700 text-white font-bold py-2 px-4 rounded`}
+            onClick={onClick} 
+            disabled={disabled}
+        >
+            
+            {children}
         </button>
     );
 };
 
-export default Button;
+

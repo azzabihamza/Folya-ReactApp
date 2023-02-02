@@ -1,7 +1,10 @@
-export { Header } from "./header";
 export { Logo } from "./logo";
-export { Main } from "./main";
-
-export { Cards } from "./cards";
-export { Footer } from "./footer";
+export { Card } from "./card";
 export { Container } from "./container";
+export { Icon } from "./icon";
+export { Modal } from "./modal";
+export { Button } from "./button";
+export { Input } from "./input";
+export { Header } from "./header";
+export { SideBar } from "./sideBar";
+export { Footer } from "./footer";

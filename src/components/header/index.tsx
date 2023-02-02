@@ -1,11 +1,10 @@
-import React from "react";
+import { FC } from "react";
 
-import { Logo } from "components";
+interface HeaderProps {}
 
-export const Header: React.FC = () => {
-  return (
-    <div className="text-center bg-gray-800">
-      <Logo />
-    </div>
-  );
+export const Header: FC<HeaderProps> = () => {
+    return (
+        <>
+        </>
+    )
 };
