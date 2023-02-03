@@ -6,7 +6,6 @@ const initialState = {
         id : 0,
         username: '',
         token: ''
-
     }
 };
 
