@@ -1,26 +1,28 @@
 import "styles/global.scss";
 import "./i18n";
-import { store } from "store";
-import { Provider } from "react-redux";
-
+import Layout from "components/layout";
+import RequireAuth from "./features/auth/requireAuth";
+import Login from "pages/login";
 import Home from "pages/home";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import { Routes, Route } from "react-router-dom";
 
 function App(): JSX.Element {
   return (
-    <div className="App">
-      <Provider store={store}>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        {/*  public routes */}
+        <Route path="/" element={<Home />} />
+        <Route path="login" element={<Login />} />
 
-          </Routes>
-        </BrowserRouter>
-
-        
-      </Provider>
-    </div>
+        {/*  protected routes */}
+        <Route element={<RequireAuth />}>
+          <Route path="dashboard" element={<div>Dashboard</div>} />
+        </Route>
+        {/* page not found 404 */}
+        <Route path="*" element={<div>Page not found</div>} />
+      </Route>
+    </Routes>
   );
 }
 
