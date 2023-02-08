@@ -20,7 +20,7 @@ function App(): JSX.Element {
           <Route path="dashboard" element={<div>Dashboard</div>} />
         </Route>
         {/* page not found 404 */}
-        <Route path="*" element={<div>Page not found</div>} />
+        {/* <Route path="*" element={<div>Page not found</div>} /> */}
       </Route>
     </Routes>
   );

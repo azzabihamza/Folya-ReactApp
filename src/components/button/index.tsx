@@ -4,19 +4,18 @@ interface Props {
     children?: React.ReactNode
     onClick?: () => void;
     disabled?: boolean;
-    bgColor?: string;
-
+    className?: string;
+    type?: "button" | "submit" | "reset" | undefined;
 }
 
-export const Button: FC<Props> = ({ children, bgColor, onClick, disabled=false }) => {
+export const Button: FC<Props> = ({ children, className, onClick, disabled=false, type }) => {
     return (
         <button 
-            type="button"
-            className={`bg-${bgColor}-700 text-white font-bold py-2 px-4 rounded`}
+            type={type}
+            className={className}
             onClick={onClick} 
             disabled={disabled}
         >
-            
             {children}
         </button>
     );
