@@ -15,7 +15,7 @@ function App(): JSX.Element {
         {/*  public routes */}
         <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />} />
-<Route path="dashboard" element={<Dashboard />} />
+        <Route path="dashboard" element={<Dashboard />} />
         {/*  protected routes */}
         <Route element={<RequireAuth />}>
           

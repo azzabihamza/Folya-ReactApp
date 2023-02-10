@@ -36,6 +36,7 @@ module.exports = {
       },
       fontFamily: {
         'sans': ['Inter'],
+        'poppins': ['Poppins'],
         'heading': ['Inter'],
       },
       fontSize: {
@@ -46,6 +47,8 @@ module.exports = {
         '2xl': '1.75rem',
         '3xl': '2.25rem',
       },
+    
+
     },
   },
   variants: {
