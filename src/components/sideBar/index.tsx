@@ -6,6 +6,10 @@ import IconCalendar from "../../assets/icons/IconCalendar";
 import IconNoteBook from "../../assets/icons/IconNoteBook";
 import IconEnvelope from "../../assets/icons/IconEnvelope";
 import IconCross from "../../assets/icons/IconCross";
+import IconLabel from "../../assets/icons/IconLabel";
+import IconHomeLocation from "../../assets/icons/IconHomeLocation";
+import IconSettingsSliders from "../../assets/icons/IconSettingsSliders";
+import IconLogout from "../../assets/icons/IconLogout";
 
 
 
@@ -70,7 +74,42 @@ export const SideBar: FC<SideBarProps> = () => {
             </ul> 
 
         </div>
-        <div className="border-t-2 border-solid border-default-main mx-3 w-10" />
+        <div className={`${isOpen? "w-10" : "w-52" } border-t-2 border-solid border-[#E4E4E4] mx-3 `} />
+        <div className="flex items-center pb-20 gap-4">
+            <ul className="py-3 px-4">
+                <li
+                    className="flex cursor-pointer py-3"
+                >
+                    <IconLabel />
+                    <span className={`${isOpen && "hidden" } pl-7 py-0.5 text-s text-gray-main origin-left duration-200 `}>Ressources</span>
+                </li>
+                <li
+                    className="flex cursor-pointer py-3"
+                >
+                    <IconHomeLocation />
+                    <span className={`${isOpen && "hidden" } pl-7 py-0.5 text-s text-gray-main origin-left duration-200 `}>Le cabinet</span>
+                </li>
+            </ul>
+        </div>
+
+        <div className={`${isOpen? "w-10" : "w-52" } border-t-2 border-solid border-[#E4E4E4] mx-3 `} />
+        <div className="flex items-center pt-2 gap-4">
+            <ul className="py-3 px-4">
+                <li
+                    className="flex cursor-pointer py-3"
+                >
+                    <IconSettingsSliders />
+                    <span className={`${isOpen && "hidden" } pl-7 py-0.5 text-s text-gray-main origin-left duration-200 `}>Paramètres</span>
+                </li>
+                <li
+                    className="flex cursor-pointer py-3"
+                >
+                    <IconLogout />
+                    <span className={`${isOpen && "hidden" } pl-7 py-0.5 text-s text-gray-main origin-left duration-200 `}>Déconnection</span>
+                </li>
+            </ul>
+        </div>
+
       </div>
         
     </div>

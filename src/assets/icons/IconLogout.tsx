@@ -1,8 +1,8 @@
-interface IconSignInProps {
+interface IconLogoutProps {
     color?: string;
 }
 
-export default function IconSignIn (props: IconSignInProps) {
+export default function IconLogout (props: IconLogoutProps) {
     return (
         <div className="w-6 h-6">
         <svg
