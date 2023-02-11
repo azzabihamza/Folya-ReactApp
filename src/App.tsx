@@ -15,13 +15,13 @@ function App(): JSX.Element {
         {/*  public routes */}
         <Route path="/" element={<Home />} />
         <Route path="login" element={<Login />} />
-        <Route path="dashboard" element={<Dashboard />} />
+        <Route path="dashboard/*" element={<Dashboard />} />
         {/*  protected routes */}
         <Route element={<RequireAuth />}>
           
         </Route>
         {/* page not found 404 */}
-        {/* <Route path="*" element={<div>Page not found</div>} /> */}
+        <Route path="*" element={<div>Page not found</div>} />
       </Route>
     </Routes>
   );

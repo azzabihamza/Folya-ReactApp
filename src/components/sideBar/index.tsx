@@ -10,7 +10,7 @@ import IconLabel from "../../assets/icons/IconLabel";
 import IconHomeLocation from "../../assets/icons/IconHomeLocation";
 import IconSettingsSliders from "../../assets/icons/IconSettingsSliders";
 import IconLogout from "../../assets/icons/IconLogout";
-
+import { Link } from "react-router-dom";
 
 
 interface SideBarProps {}
@@ -42,16 +42,21 @@ export const SideBar: FC<SideBarProps> = () => {
         <div className="flex items-center pb-6 gap-4">
             <ul className="py-3 px-4">
                 <li 
-                    className="flex cursor-pointer py-3"
-                >    
+                    className="flex flex-row cursor-pointer py-3"
+                > 
+                <Link to="profile" className="">   
                        <IconUser />
                     <span className={`${isOpen && "hidden" } pl-7 py-0.5 text-s text-gray-main origin-left duration-200 `}>Mon profile</span>
+                </Link>
                 </li>
+                
                 <li
                     className="flex cursor-pointer py-3"
                 >
-                    <IconBadge />
-                    <span className={`${isOpen && "hidden" } pl-7 py-0.5 text-s text-gray-main origin-left duration-200 `}>Liste des patients</span>
+                    <Link to="listepatient" className="">
+                        <IconBadge />
+                        <span className={`${isOpen && "hidden" } pl-7 py-0.5 text-s text-gray-main origin-left duration-200 `}>Liste des patients</span>
+                    </Link>
                 </li>
                 <li
                     className="flex cursor-pointer py-3"
